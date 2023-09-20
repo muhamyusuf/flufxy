@@ -3,6 +3,8 @@
 import * as React from 'react';
 import Link from 'next/link';
 
+import { Accordion, AccordionItem } from '@nextui-org/react';
+
 import {
   Sheet,
   SheetClose,
@@ -15,7 +17,6 @@ import {
 } from '@/components/ui/Sheet';
 
 import { cn } from '@/lib/utils';
-// import { Icons } from '@/components/icons';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -27,6 +28,7 @@ import {
 } from '@/components/ui/NavigationMenu';
 import { AlignRight, CakeSlice, X } from 'lucide-react';
 import { Button } from './ui/Button';
+import { DarkMode } from './DarkMode';
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -65,6 +67,9 @@ const components: { title: string; href: string; description: string }[] = [
       'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
   },
 ];
+
+const defaultContent =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
 
 export function Navbar() {
   return (
@@ -136,21 +141,36 @@ export function Navbar() {
             <AlignRight />
           </Button>
         </SheetTrigger>
+
         <SheetContent>
-          <SheetHeader>
-            <SheetTitle>Edit profile</SheetTitle>
-            <SheetDescription>
-              Make changes to your profile here. Click save when youre done.
-            </SheetDescription>
+          <SheetHeader className="mt-10">
+            <Accordion>
+              <AccordionItem
+                key="1"
+                aria-label="Accordion 1"
+                title="Accordion 1"
+              >
+                {defaultContent}
+              </AccordionItem>
+              <AccordionItem
+                key="2"
+                aria-label="Accordion 2"
+                title="Accordion 2"
+              >
+                {defaultContent}
+              </AccordionItem>
+              <AccordionItem
+                key="3"
+                aria-label="Accordion 3"
+                title="Accordion 3"
+              >
+                {defaultContent}
+              </AccordionItem>
+            </Accordion>
           </SheetHeader>
-          <div className="grid gap-4 py-4">
-            <div className="grid grid-cols-4 items-center gap-4"></div>
-            <div className="grid grid-cols-4 items-center gap-4"></div>
-          </div>
-          <SheetFooter>
-            <SheetClose asChild>
-              <Button type="submit">Save changes</Button>
-            </SheetClose>
+
+          <SheetFooter className="absolute bottom-5 right-5">
+            <DarkMode />
           </SheetFooter>
         </SheetContent>
       </Sheet>
