@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { Accordion, AccordionItem } from '@nextui-org/react';
 
@@ -73,11 +74,23 @@ const defaultContent =
 
 export function Navbar() {
   return (
-    <div>
+    <nav className="flex justify-between py-4 w-full items-center z-50">
+      <Link href="/" className="flex justify-center gap-2 items-center">
+        <Image
+          src="/icon/flufxy.png"
+          alt="logo"
+          width={32}
+          height={32}
+          className="cursor-pointer"
+        />
+
+        <span className="font-extrabold text-2xl text-yellow-300">flufxy</span>
+      </Link>
+
       <NavigationMenu className="hidden md:block">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+            <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
@@ -110,7 +123,7 @@ export function Navbar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+            <NavigationMenuTrigger>Career</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 {components.map((component) => (
@@ -126,9 +139,17 @@ export function Navbar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref>
+            <Link href="/about-us" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Documentation
+                About Us
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <Link href="/contact" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Contact
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -142,7 +163,7 @@ export function Navbar() {
           </Button>
         </SheetTrigger>
 
-        <SheetContent>
+        <SheetContent className="px-1">
           <SheetHeader className="mt-10">
             <Accordion>
               <AccordionItem
@@ -174,7 +195,11 @@ export function Navbar() {
           </SheetFooter>
         </SheetContent>
       </Sheet>
-    </div>
+
+      <div className="hidden md:block">
+        <DarkMode />
+      </div>
+    </nav>
   );
 }
 

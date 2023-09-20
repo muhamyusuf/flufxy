@@ -8,10 +8,7 @@ import { motion } from 'framer-motion';
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center flex-1 w-full text-center max-w-[1440px] mx-auto">
-      <nav className="flex justify-center w-full items-center z-50">
-        <DarkMode />
-        <Navbar />
-      </nav>
+      <Navbar />
 
       <div className="w-full h-screen relative">
         <motion.div
