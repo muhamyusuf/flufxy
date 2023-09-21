@@ -10,7 +10,7 @@ export default function Home() {
     <main className="flex flex-col items-center justify-center flex-1 w-full text-center max-w-[1440px] mx-auto">
       <Navbar />
 
-      <div className="w-full h-screen relative">
+      <div className="w-full h-screen relative mt-20 md:mt-32">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -49,6 +49,10 @@ export default function Home() {
             flufxy
           </motion.h1>
         </div>
+      </div>
+
+      <div className="h-screen w-full">
+        <h2 className="text-[32px] font-bold">flufxy menu</h2>
       </div>
     </main>
   );
