@@ -8,12 +8,9 @@ import { Accordion, AccordionItem } from '@nextui-org/react';
 
 import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from '@/components/ui/Sheet';
 
@@ -28,7 +25,6 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/NavigationMenu';
 import { AlignRight, CakeSlice, X } from 'lucide-react';
-import { Button } from './ui/Button';
 import { DarkMode } from './DarkMode';
 
 const components: { title: string; href: string; description: string }[] = [
@@ -84,7 +80,7 @@ export function Navbar() {
           className="cursor-pointer"
         />
 
-        <span className="font-extrabold text-2xl text-yellow-300">flufxy</span>
+        <span className="font-extrabold text-2xl text-yellow">flufxy</span>
       </Link>
 
       <NavigationMenu className="hidden md:block">
@@ -158,32 +154,25 @@ export function Navbar() {
 
       <Sheet>
         <SheetTrigger asChild className="md:hidden">
-          <Button variant="ghost">
-            <AlignRight />
-          </Button>
+          <AlignRight />
         </SheetTrigger>
 
         <SheetContent className="px-1">
           <SheetHeader className="mt-10">
             <Accordion>
-              <AccordionItem
-                key="1"
-                aria-label="Accordion 1"
-                title="Accordion 1"
-              >
+              <AccordionItem key="1" aria-label="Accordion 1" title="Menu">
+                {defaultContent}
+              </AccordionItem>
+              <AccordionItem key="2" aria-label="Accordion 2" title="Career">
+                {defaultContent}
+              </AccordionItem>
+              <AccordionItem key="3" aria-label="Accordion 3" title="About Us">
                 {defaultContent}
               </AccordionItem>
               <AccordionItem
-                key="2"
-                aria-label="Accordion 2"
-                title="Accordion 2"
-              >
-                {defaultContent}
-              </AccordionItem>
-              <AccordionItem
-                key="3"
+                key="4"
                 aria-label="Accordion 3"
-                title="Accordion 3"
+                title="Contact Us"
               >
                 {defaultContent}
               </AccordionItem>

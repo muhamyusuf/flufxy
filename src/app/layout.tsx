@@ -18,11 +18,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} scrollbar-none`}>
         <ClientProviders>
-          <div className="bg-gradient-to-b from-white to-black dark:from-black dark:to-white px-2 md:px-8 lg:px-32">
-            {children}
-          </div>
+          <div className="px-2 md:px-8 lg:px-32">{children}</div>
         </ClientProviders>
       </body>
     </html>
   );
 }
+
+// bg-gradient-to-b from-white to-black dark:from-black dark:to-white

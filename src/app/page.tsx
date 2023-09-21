@@ -28,15 +28,15 @@ export default function Home() {
           />
         </motion.div>
 
-        <div>
+        <div className="text-yellow">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ ease: 'easeOut', duration: 1, delay: 1 }}
-            className="absolute top-5 lg:top-10 h-full w-full mx-auto text-[32px] lg:text-[90px] xl:text-[100px] font-bold font-balo"
+            className="absolute top-5 lg:top-10 h-full w-full mx-auto text-[32px] md:text-[64px] xl:text-[100px] font-bold font-balo"
           >
-            FLUFFY & MELTED <br /> WITH
+            fluffy and melted <br /> with
           </motion.h1>
 
           <motion.h1
@@ -44,9 +44,9 @@ export default function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ ease: 'easeOut', duration: 1, delay: 1.5 }}
-            className="absolute top-[130px] lg:top-1/2 left-1/2 z-10 transform -translate-x-1/2 -translate-y-1/2 text-[32px] lg:text-[90px] xl:text-[100px] font-bold font-balo"
+            className="absolute top-[130px] md:top-[240px] lg:top-[260px] xl:top-[380px] left-1/2 z-10 transform -translate-x-1/2 -translate-y-1/2 text-[32px] md:text-[64px] xl:text-[100px] font-bold font-balo"
           >
-            FLUFXY
+            flufxy
           </motion.h1>
         </div>
       </div>
