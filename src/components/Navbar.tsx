@@ -70,7 +70,7 @@ const defaultContent =
 
 export function Navbar() {
   return (
-    <nav className="flex justify-between py-4 w-full items-center z-50 fixed top-0 container px-2 md:px-8 lg:px-32">
+    <nav className="flex justify-between py-4 w-full items-center z-50 sticky top-0 container px-2 md:px-8 lg:px-32 backdrop-blur-sm">
       <Link href="/" className="flex justify-center gap-2 items-center">
         <Image
           src="/icon/flufxy.png"

@@ -24,5 +24,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-// bg-gradient-to-b from-white to-black dark:from-black dark:to-white
