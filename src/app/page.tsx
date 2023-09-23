@@ -1,5 +1,7 @@
 import { Navbar } from '@/components/Navbar';
+import Footer from '@/components/landing-page/Footer';
 import Hero from '@/components/landing-page/Hero';
+import Menu from '@/components/landing-page/Menu';
 
 export default function Home() {
   return (
@@ -8,9 +10,9 @@ export default function Home() {
 
       <Hero />
 
-      <div className="h-screen w-full">
-        <h2 className="text-[32px] font-bold">flufxy menu</h2>
-      </div>
+      <Menu />
+
+      <Footer />
     </main>
   );
 }
