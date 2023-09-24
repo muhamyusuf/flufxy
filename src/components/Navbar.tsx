@@ -160,7 +160,7 @@ export function Navbar() {
 
         <SheetContent className="px-1">
           <SheetHeader className="mt-10">
-            <Accordion>
+            <Accordion defaultExpandedKeys={['1']}>
               <AccordionItem key="1" aria-label="Accordion 1" title="Menu">
                 {defaultContent}
               </AccordionItem>

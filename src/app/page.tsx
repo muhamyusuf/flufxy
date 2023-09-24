@@ -14,7 +14,7 @@ import { Button } from '@/components/ui/Button';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center flex-1 w-full text-center max-w-[1440px] mx-auto">
+    <main className="flex flex-col items-center justify-center w-full text-center max-w-[1440px] mx-auto">
       <Navbar />
 
       <Hero />
