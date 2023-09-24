@@ -11,6 +11,6 @@ export const menu = [
     price: 'Rp. 30.000',
     image:
       'https://www.allrecipes.com/thmb/6x0Lw9L4MEU8INHnK4tXGRV9XWI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20334-banana-pancakes-i-DDMFS-4x3-9f291f03044247d48c9ec26917952402.jpg',
-    description: 'Pancake pisang lembut dan manis',
+    description: 'Pancake pisang     lembut dan manis',
   },
 ];

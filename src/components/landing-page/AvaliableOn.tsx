@@ -8,7 +8,7 @@ export default function AvaliableOn() {
         avaliable on
       </h2>
 
-      <div className="flex-wrap flex gap-2 md:gap-10 justify-center items-center">
+      <div className="flex-wrap flex gap-2 md:gap-10 justify-center items-center dark:bg-white rounded-lg">
         <Image
           src="/avaliable-on/gofood.svg"
           alt="gofood logo"
