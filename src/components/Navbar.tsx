@@ -24,9 +24,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/NavigationMenu';
-import { AlignRight, CakeSlice, ShoppingCart, X } from 'lucide-react';
-import { DarkMode } from './DarkMode';
-import { Button } from './ui/Button';
+import { AlignRight, CakeSlice, ShoppingCart } from 'lucide-react';
+import { DarkMode } from '@/components/DarkMode';
+import { Button } from '@/components/ui/Button';
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -89,27 +89,8 @@ export function Navbar() {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/"
-                    >
-                      <CakeSlice className="h-6 w-6" />
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        shadcn/ui
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Beautifully designed components built with Radix UI and
-                        Tailwind CSS.
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <ListItem href="/docs" title="Introduction">
-                  Re-usable components built using Radix UI and Tailwind CSS.
-                </ListItem>
+              <ul className="grid gap-3 p-2 md:w-[300px]">
+                <ListItem href="/menu/dessert" title="Desert" />
                 <ListItem href="/docs/installation" title="Installation">
                   How to install dependencies and structure your app.
                 </ListItem>

@@ -14,7 +14,7 @@ import { Button } from '@/components/ui/Button';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center w-full text-center max-w-[1440px] mx-auto">
+    <main className="flex flex-col overflow-hidden items-center justify-center w-full text-center max-w-[1440px] mx-auto">
       <Navbar />
 
       <Hero />
@@ -25,7 +25,10 @@ export default function Home() {
 
       <Sheet>
         <SheetTrigger asChild className="md:hidden fixed bottom-3 right-3">
-          <Button variant={'ghost'} className="bg-yellow rounded-md">
+          <Button
+            variant={'ghost'}
+            className="bg-yellow hover:bg-yellow/80 rounded-md"
+          >
             <ShoppingCart className="w-4 h-4 text-black" />
           </Button>
         </SheetTrigger>

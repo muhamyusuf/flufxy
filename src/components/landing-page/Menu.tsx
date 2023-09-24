@@ -10,7 +10,7 @@ export default function Menu() {
         flufxy menu
       </h2>
 
-      <div className="flex overflow-scroll md:overflow-hidden py-5 md:justify-center md:flex-wrap items-center gap-4">
+      <div className="flex overflow-scroll scrollbar-none md:overflow-hidden py-5 md:justify-center md:flex-wrap items-center gap-4">
         {menu.map((item, index) => (
           <div
             key={index}

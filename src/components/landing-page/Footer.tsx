@@ -5,7 +5,7 @@ import React from 'react';
 export default function Footer() {
   return (
     <footer className="py-5 w-full text-start flex justify-center items-center flex-col">
-      <Link href="#">
+      <Link href="">
         <Instagram />
       </Link>
 
