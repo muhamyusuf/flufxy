@@ -48,7 +48,7 @@ export default function Menu() {
         className={`${buttonVariants({ variant: 'outline' })}`}
         href="/menu"
       >
-        See all menu's
+        See all menu&lsquo;s
       </Link>
     </div>
   );
