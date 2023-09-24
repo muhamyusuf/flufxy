@@ -90,14 +90,14 @@ export function Navbar() {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid gap-3 p-2 md:w-[300px]">
-                <ListItem href="/menu/dessert" title="Desert" />
-                <ListItem href="/docs/installation" title="Installation">
-                  How to install dependencies and structure your app.
-                </ListItem>
-                <ListItem href="/docs/primitives/typography" title="Typography">
-                  Styles for headings, paragraphs, lists...etc
-                </ListItem>
+              <ul className="grid gap-3 p-2 w-[160px]">
+                <ListItem
+                  href="/menu/dessert"
+                  title="Desert"
+                  className="-ml-1"
+                />
+                <ListItem href="/docs/cake" title="Cake" className="-ml-1" />
+                <ListItem href="/menu/drink" title="Drink" className="-ml-1" />
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -134,25 +134,34 @@ export function Navbar() {
         </SheetTrigger>
 
         <SheetContent className="px-1">
-          <SheetHeader className="mt-10">
+          <SheetHeader className="mt-10 font-semibold flex flex-col items-start">
             <Accordion defaultExpandedKeys={['1']}>
               <AccordionItem key="1" aria-label="Accordion 1" title="Menu">
-                {defaultContent}
-              </AccordionItem>
-              <AccordionItem key="2" aria-label="Accordion 2" title="Career">
-                {defaultContent}
-              </AccordionItem>
-              <AccordionItem key="3" aria-label="Accordion 3" title="About Us">
-                {defaultContent}
-              </AccordionItem>
-              <AccordionItem
-                key="4"
-                aria-label="Accordion 3"
-                title="Contact Us"
-              >
-                {defaultContent}
+                <ul className="flex items-start flex-col text-foreground/70">
+                  <Link href="/menu/dessert" title="Desert" className="ml-1">
+                    Desert
+                  </Link>
+                  <Link href="/docs/cake" title="Cake" className="ml-1">
+                    Cake
+                  </Link>
+                  <Link href="/menu/drink" title="Drink" className="ml-1">
+                    Drink
+                  </Link>
+                </ul>
               </AccordionItem>
             </Accordion>
+
+            <Link href="/career" className="ml-2">
+              Career
+            </Link>
+
+            <Link href="/about" className="ml-2">
+              About Us
+            </Link>
+
+            <Link href="/contact" className="ml-2">
+              Contact
+            </Link>
           </SheetHeader>
 
           <SheetFooter className="absolute bottom-5 right-5">
