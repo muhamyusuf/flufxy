@@ -24,8 +24,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/NavigationMenu';
-import { AlignRight, CakeSlice, X } from 'lucide-react';
+import { AlignRight, CakeSlice, ShoppingCart, X } from 'lucide-react';
 import { DarkMode } from './DarkMode';
+import { Button } from './ui/Button';
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -185,8 +186,24 @@ export function Navbar() {
         </SheetContent>
       </Sheet>
 
-      <div className="hidden md:block">
+      <div className="md:flex hidden justify-center items-center gap-1">
         <DarkMode />
+
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant={'ghost'}>
+              <ShoppingCart className="w-4 h-4" />
+            </Button>
+          </SheetTrigger>
+
+          <SheetContent className="px-2">
+            <SheetHeader className="mt-10">Cart</SheetHeader>
+
+            <SheetFooter className="w-full">
+              <Button>Checkout</Button>
+            </SheetFooter>
+          </SheetContent>
+        </Sheet>
       </div>
     </nav>
   );

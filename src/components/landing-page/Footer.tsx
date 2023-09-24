@@ -9,7 +9,7 @@ export default function Footer() {
         <Instagram />
       </Link>
 
-      <div className="mt-5">
+      <div className="mt-2">
         <p>© 2023 All right reserved</p>
       </div>
     </footer>
