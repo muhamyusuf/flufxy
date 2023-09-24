@@ -30,7 +30,7 @@ export default function Menu() {
             </h3>
 
             {item.name === 'Souffle Pancake' ? (
-              <span className="absolute -top-2 bg-yellow rounded-md px-2 py-1 md:-left-2 left-0 font-semibold">
+              <span className="absolute text-black -top-2 bg-yellow rounded-md px-2 py-1 md:-left-2 left-0 font-semibold">
                 best seller 📈
               </span>
             ) : null}
