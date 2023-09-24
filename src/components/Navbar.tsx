@@ -8,6 +8,7 @@ import { Accordion, AccordionItem } from '@nextui-org/react';
 
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetFooter,
   SheetHeader,
@@ -67,9 +68,6 @@ import { Languages } from '@/components/Languages';
 //   },
 // ];
 
-const defaultContent =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
-
 export function Navbar() {
   return (
     <nav className="flex justify-between py-4 w-full items-center z-50 sticky top-0 container backdrop-blur-sm">
@@ -85,10 +83,12 @@ export function Navbar() {
         <span className="font-extrabold text-2xl text-yellow">flufxy</span>
       </Link>
 
-      <NavigationMenu className="hidden md:block">
+      <NavigationMenu className="hidden md:block bg-transparent">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
+            <NavigationMenuTrigger>
+              <Link href="/menu">Menu</Link>
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-2 w-[160px]">
                 <ListItem
@@ -139,28 +139,28 @@ export function Navbar() {
               <AccordionItem key="1" aria-label="Accordion 1" title="Menu">
                 <ul className="flex items-start flex-col text-foreground/70">
                   <Link href="/menu/dessert" title="Desert" className="ml-1">
-                    Desert
+                    <SheetClose>Desert</SheetClose>
                   </Link>
                   <Link href="/docs/cake" title="Cake" className="ml-1">
-                    Cake
+                    <SheetClose>Cake</SheetClose>
                   </Link>
                   <Link href="/menu/drink" title="Drink" className="ml-1">
-                    Drink
+                    <SheetClose>Drink</SheetClose>
                   </Link>
                 </ul>
               </AccordionItem>
             </Accordion>
 
             <Link href="/career" className="ml-2">
-              Career
+              <SheetClose>Career</SheetClose>
             </Link>
 
-            <Link href="/about" className="ml-2">
-              About Us
+            <Link href="/about-us" className="ml-2">
+              <SheetClose>About Us</SheetClose>
             </Link>
 
             <Link href="/contact" className="ml-2">
-              Contact
+              <SheetClose>Contact</SheetClose>
             </Link>
           </SheetHeader>
 

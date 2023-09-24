@@ -1,5 +1,3 @@
-import { Navbar } from '@/components/Navbar';
-import Footer from '@/components/landing-page/Footer';
 import Hero from '@/components/landing-page/Hero';
 import Menu from '@/components/landing-page/Menu';
 import {
@@ -16,15 +14,11 @@ import AvaliableOn from '@/components/landing-page/AvaliableOn';
 export default function Home() {
   return (
     <main className="flex-col flex overflow-hidden items-center justify-center w-full text-center max-w-[1440px] mx-auto">
-      <Navbar />
-
       <Hero />
 
       <Menu />
 
       <AvaliableOn />
-
-      <Footer />
 
       <Sheet>
         <SheetTrigger asChild className="md:hidden fixed bottom-3 right-3">
