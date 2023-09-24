@@ -11,15 +11,18 @@ import {
 } from '@/components/ui/Sheet';
 import { ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import AvaliableOn from '@/components/landing-page/AvaliableOn';
 
 export default function Home() {
   return (
-    <main className="flex flex-col overflow-hidden items-center justify-center w-full text-center max-w-[1440px] mx-auto">
+    <main className="flex-col flex overflow-hidden items-center justify-center w-full text-center max-w-[1440px] mx-auto">
       <Navbar />
 
       <Hero />
 
       <Menu />
+
+      <AvaliableOn />
 
       <Footer />
 

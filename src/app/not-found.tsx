@@ -8,6 +8,8 @@ export default function NotFound() {
         Under Constructions
       </h1>
 
+      <span>or</span>
+
       <p>Something went wrong</p>
       <p>Could not find requested resource</p>
 

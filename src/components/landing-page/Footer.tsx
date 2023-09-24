@@ -10,7 +10,7 @@ export default function Footer() {
       </Link>
 
       <div className="mt-2">
-        <p>© 2023 All right reserved</p>
+        <p>© flufxy 2023 All right reserved</p>
       </div>
     </footer>
   );
