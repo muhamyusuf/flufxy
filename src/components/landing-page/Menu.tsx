@@ -1,8 +1,10 @@
-import { menu } from '@/datas/menu';
 import React from 'react';
-import { Button, buttonVariants } from '@/components/ui/Button';
+
 import Image from 'next/image';
 import Link from 'next/link';
+
+import { Button, buttonVariants } from '@/components/ui/Button';
+import { menu } from '@/datas/menu';
 
 export default function Menu() {
   return (

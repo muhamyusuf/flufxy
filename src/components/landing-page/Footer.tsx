@@ -1,5 +1,5 @@
-import { Instagram } from 'lucide-react';
 import React from 'react';
+import { Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (

@@ -25,48 +25,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/NavigationMenu';
-import { AlignRight, CakeSlice, ShoppingCart } from 'lucide-react';
+import { AlignRight, ShoppingCart } from 'lucide-react';
 import { DarkMode } from '@/components/DarkMode';
 import { Button } from '@/components/ui/Button';
-import { Languages } from '@/components/Languages';
-
-// const components: { title: string; href: string; description: string }[] = [
-//   {
-//     title: 'Alert Dialog',
-//     href: '/docs/primitives/alert-dialog',
-//     description:
-//       'A modal dialog that interrupts the user with important content and expects a response.',
-//   },
-//   {
-//     title: 'Hover Card',
-//     href: '/docs/primitives/hover-card',
-//     description:
-//       'For sighted users to preview content available behind a link.',
-//   },
-//   {
-//     title: 'Progress',
-//     href: '/docs/primitives/progress',
-//     description:
-//       'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
-//   },
-//   {
-//     title: 'Scroll-area',
-//     href: '/docs/primitives/scroll-area',
-//     description: 'Visually or semantically separates content.',
-//   },
-//   {
-//     title: 'Tabs',
-//     href: '/docs/primitives/tabs',
-//     description:
-//       'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
-//   },
-//   {
-//     title: 'Tooltip',
-//     href: '/docs/primitives/tooltip',
-//     description:
-//       'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
-//   },
-// ];
 
 export function Navbar() {
   return (
@@ -133,7 +94,7 @@ export function Navbar() {
           <AlignRight />
         </SheetTrigger>
 
-        <SheetContent className="px-1">
+        <SheetContent className="px-[2px]">
           <SheetHeader className="mt-10 font-semibold flex flex-col items-start">
             <Accordion defaultExpandedKeys={['1']}>
               <AccordionItem key="1" aria-label="Accordion 1" title="Menu">
@@ -171,8 +132,6 @@ export function Navbar() {
       </Sheet>
 
       <div className="md:flex hidden justify-center items-center gap-1">
-        {/* <Languages /> */}
-
         <DarkMode />
 
         <Sheet>
