@@ -8,7 +8,7 @@ import Footer from '@/components/landing-page/Footer';
 const inter = Baloo_2({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'flufxy',
+  title: { default: 'flufxy', template: '%s | flufxy' },
 };
 
 export default function RootLayout({
